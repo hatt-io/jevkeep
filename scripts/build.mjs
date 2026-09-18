@@ -23,7 +23,7 @@ const notices = ['fast-jev-compaction (e3f262a7f4d42bd8dd32ced30d26176f7cb545b0)
 for (const name of ['proper-lockfile', 'graceful-fs', 'retry', 'signal-exit']) {
   const root = dirname(require.resolve(`${name}/package.json`));
   const pkg = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
-  const license = name === 'signal-exit' ? 'LICENSE.txt' : 'LICENSE';
+  const license = { retry: 'License', 'signal-exit': 'LICENSE.txt' }[name] ?? 'LICENSE';
   notices.push(`${name} ${pkg.version}\n\n${await readFile(join(root, license), 'utf8')}`);
 }
 await writeFile('dist/THIRD_PARTY_LICENSES.txt', notices.join('\n\n----------------------------------------\n\n'));
