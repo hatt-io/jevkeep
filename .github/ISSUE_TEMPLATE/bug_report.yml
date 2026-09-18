@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a problem installing or using JevKeep.
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic examples. Leave out API keys, private conversations, and saved session files.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Node version, Codex version, and whether you use the app or CLI.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include a small example that someone else can try.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Relevant JevKeep errors, with private details removed.
+      render: text

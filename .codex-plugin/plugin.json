@@ -1,0 +1,23 @@
+{
+  "name": "jevkeep",
+  "version": "0.1.0",
+  "description": "Codex plugin that preserves useful conversation excerpts alongside the summary after context compaction.",
+  "author": {
+    "name": "hatt-io",
+    "url": "https://github.com/hatt-io"
+  },
+  "homepage": "https://github.com/hatt-io/jevkeep",
+  "repository": "https://github.com/hatt-io/jevkeep",
+  "license": "MIT",
+  "keywords": ["compaction", "context", "jev", "hooks"],
+  "interface": {
+    "displayName": "JevKeep",
+    "shortDescription": "Preserve useful conversation text through Codex compaction.",
+    "longDescription": "When Codex condenses a long conversation into a summary, JevKeep restores selected original text alongside it, including useful commands, errors, file paths, and decisions. Works with manual and automatic compaction. Requires Node.js 22+ and a Typesafe API key.",
+    "developerName": "hatt-io",
+    "websiteURL": "https://github.com/hatt-io/jevkeep",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": ["Explain how JevKeep preserves historical excerpts across compaction."]
+  }
+}

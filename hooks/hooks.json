@@ -1,0 +1,28 @@
+{
+  "description": "Preserve selected historical excerpts through native Codex compaction using Jev.",
+  "hooks": {
+    "PreCompact": [{
+      "matcher": "^(manual|auto)$",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"${PLUGIN_ROOT}/dist/jevkeep.cjs\" pre-compact",
+        "commandWindows": "node \"%PLUGIN_ROOT%/dist/jevkeep.cjs\" pre-compact",
+        "timeout": 30,
+        "async": false,
+        "statusMessage": "Selecting historical excerpts with Jev"
+      }]
+    }],
+    "SessionStart": [{
+      "matcher": "^compact$",
+      "hooks": [{
+        "type": "command",
+        "command": "node \"${PLUGIN_ROOT}/dist/jevkeep.cjs\" session-start",
+        "commandWindows": "node \"%PLUGIN_ROOT%/dist/jevkeep.cjs\" session-start",
+        "timeout": 30,
+        "async": false,
+        "additionalContextLimit": 0,
+        "statusMessage": "Restoring historical excerpts"
+      }]
+    }]
+  }
+}

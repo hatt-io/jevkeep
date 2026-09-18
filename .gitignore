@@ -1,0 +1,33 @@
+# Dependencies and local build caches
+node_modules/
+*.tsbuildinfo
+.cache/
+coverage/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.npmrc
+config.json
+*.pem
+*.key
+.codex/
+.agents/
+
+# Local session data and diagnostics
+sessions/
+*.jsonl
+*.log
+
+# Editor, OS, and temporary files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+codex-tmp-*
+
+# dist/ is intentionally committed so installation needs no build step.
